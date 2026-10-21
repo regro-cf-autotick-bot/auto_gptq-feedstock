@@ -18,7 +18,7 @@ build:
     - TORCH_CUDA_ARCH_LIST=7.5;8.0;8.6;8.9;9.0;10.0;12.0+PTX                  # [(cuda_compiler_version or "").startswith("13")]
     - BUILD_CUDA_EXT=0
   script: {{ PYTHON }} -m pip install . -vv --no-cache-dir auto-gptq=={{ version }}
-  number: 10
+  number: 11
   skip: true  # [cuda_compiler_version == "None" or osx or win]
 
 requirements:
